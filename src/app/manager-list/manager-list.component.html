@@ -1,0 +1,22 @@
+<h1>Managers list</h1>
+<a routerLink="/add" class="btn btn-floating waves-effect"><i class="material-icons">add</i></a>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Last name</th>
+    <th>Address</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor="let manager of managers">
+    <td>{{manager.name}}</td>
+    <td>{{manager.lastname}}</td>
+    <td>{{manager.address}}</td>
+    <td>{{manager.age}}</td>
+    <td>
+      <a routerLink="/detail/{{manager.id}}" class="btn indigo">edit</a>
+      <button (click)="delete(manager.id)" class="btn red">delete</button>
+
+    </td>
+  </tr>
+</table>
+

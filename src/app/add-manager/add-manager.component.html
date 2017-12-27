@@ -1,0 +1,23 @@
+<h1>Add manager</h1>
+<form>
+  <div>
+    <label for="name">Name</label>
+    <input [(ngModel)]="manager.name" name="name">
+  </div>
+  <div>
+    <label for="lastname">Last name</label>
+    <input [(ngModel)]="manager.lastname" name="lastname">
+  </div>
+  <div>
+    <label for="address">Address</label>
+    <input [(ngModel)]="manager.address" name="address">
+  </div>
+  <div>
+    <label for="age">Age</label>
+    <input [(ngModel)]="manager.age" name="age" type="number">
+  </div>
+  <div>
+    <button (click)="save()" class="btn indigo">Save</button>
+    <button (click)="goBack()" class="btn">Go Back</button>
+  </div>
+</form>
